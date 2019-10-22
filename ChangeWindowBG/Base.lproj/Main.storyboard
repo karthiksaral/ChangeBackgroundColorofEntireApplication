@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s6e-Zt-LmD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChangeWindowBG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1Ib-PV-QiL">
+                                <rect key="frame" x="69" y="129" width="275" height="32"/>
+                                <color key="backgroundColor" red="0.0078431372550000003" green="0.49803921569999998" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <segments>
+                                    <segment title="brown"/>
+                                    <segment title="blue"/>
+                                    <segment title="green"/>
+                                </segments>
+                                <connections>
+                                    <action selector="ChangeViewBG:" destination="BYZ-38-t0r" eventType="valueChanged" id="70W-5f-fic"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1Ib-PV-QiL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="69" id="IGT-f4-5MG"/>
+                            <constraint firstItem="1Ib-PV-QiL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="UYG-Tv-cFd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Ib-PV-QiL" secondAttribute="trailing" constant="70" id="epy-gO-3xA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ivW-b8-THU">
+                        <barButtonItem key="backBarButtonItem" title=" " id="rdu-11-thv"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Jgs-SR-NHX">
+                            <connections>
+                                <segue destination="pkB-rs-iZt" kind="show" id="g4r-go-AVf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="changeVCBGSegment" destination="1Ib-PV-QiL" id="SBm-oe-HKG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039.1304347826087" y="101.78571428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NRv-1n-uu2">
+            <objects>
+                <viewController id="pkB-rs-iZt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z1G-39-8lB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WKk-Wz-HTd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bUf-n1-hZ4">
+                        <barButtonItem key="backBarButtonItem" title=" " id="bIT-xo-fJO"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OyC-9p-gmR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1743" y="102"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IwJ-1o-PY4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s6e-Zt-LmD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SVd-lA-wqg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Apc-6B-Qf5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tED-3f-u1R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+</document>
